@@ -1,18 +1,26 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-import { AppRoutingModule } from './app-routing.module';
+import { AppRoutingModule, RoutingComponent } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { AlertModule } from 'ngx-bootstrap';
+import { TaskServiceService } from './task-service.service';
+import { DatePickerModule } from '@syncfusion/ej2-angular-calendars';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,    
+    RoutingComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    AlertModule ,
+    DatePickerModule ,
+    FormsModule   
   ],
-  providers: [],
+  providers: [TaskServiceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

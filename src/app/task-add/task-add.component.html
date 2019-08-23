@@ -1,0 +1,37 @@
+
+<div class="container">
+    <h2>Add Task Details</h2>
+    <div class="row">
+        <div class="col-sm-4">Task Name</div>
+        <div class="col-sm-4"><input type="text" [(ngModel)]='taskId' aria-placeholder="Enter Task Name"></div>
+    </div>
+    <br/>
+    <div class="row">
+        <div class="col-sm-4">Parent Task</div>
+        <div class="col-sm-4"><input type="text" [(ngModel)]='parentTask' aria-placeholder="Enter Parent Task"></div>
+    </div>
+    <br/>
+    <div class="row">
+        <div class="col-sm-4">Priority</div>
+        <div class="col-sm-4"><input type="text" [(ngModel)]='priority' aria-placeholder="Enter priority"></div>
+    </div>
+    <br/>    
+    <div class="row">
+        <div class="col-sm-4">Start Date</div>
+        <div class="col-sm-4">
+                <ejs-datepicker id='datepicker' [(ngModel)]='startDate' placeholder='Select a date' [value]='dateValue' [min]='minDate' [max]='maxDate'></ejs-datepicker></div>
+    </div>
+    <br/>
+    <div class="row">
+        <div class="col-sm-4">End Date</div>
+        <div class="col-sm-4"><ejs-datepicker id='datepicker' [(ngModel)]='endDate' placeholder='Select a date' [value]='dateValue' [min]='minDate' [max]='maxDate'></ejs-datepicker></div>
+    </div>
+    <br/>
+    <br/>
+    <div class="row">
+            <div class="col-sm-2"></div>            
+        <div class="col-sm-2"><button type="button" class="btn btn-primary" (click)="onSubmit()">Save</button></div>
+        <div class="col-sm-2"><button type="button" class="btn btn-primary" (click)="onClear()">Clear</button></div>
+    </div>
+    <br/>
+</div>

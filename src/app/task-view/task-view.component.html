@@ -1,0 +1,29 @@
+<h1>View Task Detials</h1>
+<div>
+    <table class="table">
+        <thead>
+          <tr>            
+            <th scope="col">Task ID</th>
+            <th scope="col">TaskName</th>
+            <th scope="col">Parent Task </th>
+            <th scope="col">Priority</th>
+            <th scope="col">Start Date</th>
+            <th scope="col">End Date</th>
+            <th scope="col">Edit</th>
+            <th scope="col">Delete</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let task of taskList">
+            <th scope="row">{{task.TaskID}}</th>
+            <td>{{task.TaskName}}</td>
+            <td>{{task.ParentTask}}</td>
+            <td>{{task.Priority}}</td>
+            <td>{{task.StartDate}}</td>
+            <td>{{task.EndDate}}</td>
+            <td><a href="">Edit</a></td>
+            <td><a href="">Delete</a></td>
+          </tr>
+        </tbody>
+      </table>
+</div>
